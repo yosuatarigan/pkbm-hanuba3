@@ -1,5 +1,6 @@
 import React from 'react';
-import MaterialTable from 'material-table';
+import MaterialTable,{MTableToolbar} from 'material-table';
+
 import { forwardRef } from 'react';
 
 import AddBox from '@material-ui/icons/AddBox';
@@ -17,7 +18,7 @@ import Remove from '@material-ui/icons/Remove';
 import SaveAlt from '@material-ui/icons/SaveAlt';
 import Search from '@material-ui/icons/Search';
 import ViewColumn from '@material-ui/icons/ViewColumn';
-import firebase, { updatedata, adddata, deletedata, firestore } from '../../firebase/firebase.utils';
+import firebase, { updatedata, adddata, deletedata } from '../../firebase/firebase.utils';
 
 const tableIcons = {
   Add: forwardRef((props, ref) => <AddBox {...props} ref={ref} />),
@@ -39,83 +40,33 @@ const tableIcons = {
   ViewColumn: forwardRef((props, ref) => <ViewColumn {...props} ref={ref} />)
 };
 
-export default function Materialtable({columns,collection,title}) {
-    //columnt berbentuk Array
+function Tableuser() {
+    return (
+      <MaterialTable
+        title="Render Image Preview"
+        icons = {tableIcons}
+        columns={[
+          { title: 'Avatar', field: 'imageUrl', render: rowData => <img src={rowData.imageUrl} style={{width: 40, borderRadius: '50%'}}/> },
+          { title: 'Name', field: 'name' },
+          { title: 'Email', field: 'email' },
+        ]}
+        data={[
+          { name: 'Mehmet', surname: 'Baran', birthYear: 1987, birthCity: 63, imageUrl: 'https://avatars0.githubusercontent.com/u/7895451?s=460&v=4' },
+          { name: 'Zerya Betül', surname: 'Baran', birthYear: 2017, birthCity: 34, imageUrl: 'https://avatars0.githubusercontent.com/u/7895451?s=460&v=4' },
+        ]}
+        // components={{
+        //     Toolbar: props => (
+        //       <div>
+        //         <MTableToolbar {...props} />
+        //         <div style={{padding: '0px 10px'}}>
+        //           <button label="Chip 1" color="secondary" style={{marginRight: 5}}>Add User</button>
+        //         </div>
+        //       </div>
+        //     ),
+        //   }}        
+      />
+    )
+  }
   
 
-  const [data, setdata] = React.useState([]);
-  const [refresher, setrefresher] = React.useState(false);
-  const [collection3, setcollection] = React.useState(collection);
-
-
-  const handlerefresh = () => {
-    if(refresher == false){
-      setrefresher(true)
-    }
-    else if(refresher== true){
-      setrefresher(false)
-    }
-};
-
-
-  // React.useEffect(() => {
-  //   const fetchData = async () => {
-  //     const db = firebase.firestore()
-  //     const data = await db.collection(collection).get()
-  //     setdata(data.docs.map(doc => ({...doc.data(), id:doc.id } )))
-  //     // console.log(data.docs.map(doc => ({...doc.data(), id:doc.id } )))
-  //   }
-  //   fetchData()
-  // }, [refresher])
-
-  React.useEffect(() => {
-    firestore.collection(collection)
-    .onSnapshot((snapshot)=>{
-      const data = snapshot.docs.map((doc)=>({
-        id: doc.id,
-        ...doc.data()
-      }))
-      setdata(data)
-    })
-  }, [refresher])
-
- 
-  return (
-    <MaterialTable
-      icons={tableIcons}
-      title={title}
-      columns={columns}
-      data={data}
-      options={{
-        exportButton: true
-      }}
-      editable={{
-        onRowAdd: (newData) =>
-          new Promise((resolve) => {
-            setTimeout(() => {
-              resolve();
-              adddata(collection,newData)
-              
-              handlerefresh();
-            }, 1000);
-          }),
-        onRowUpdate: (newData, oldData) =>
-          new Promise((resolve) => {
-            setTimeout(() => {
-              resolve();
-              updatedata(collection,newData.id,newData)
-              handlerefresh();
-            }, 1000);
-          }),
-        onRowDelete: (oldData) =>
-          new Promise((resolve) => {
-            setTimeout(() => {
-              resolve();
-                deletedata(collection,oldData.id)
-                handlerefresh();
-            }, 1000);
-          }),
-      }}
-    />
-  );
-}
+export default Tableuser;

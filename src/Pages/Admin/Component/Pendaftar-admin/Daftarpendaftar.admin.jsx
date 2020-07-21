@@ -4,7 +4,7 @@ import Materialtable from '../Materialtable-admin/Materialtable.admin';
 const Daftarpendaftar = ()=>{
 
     const collection="pendaftar";
-    const title = "Kritik & Pesan";
+    const title = "Pendaftar";
    const  columns= [
     { title: 'Nama', field: 'displayName' },
     { title: 'Tanggal Lahir', field: 'lahir' },

@@ -42,7 +42,6 @@ class App extends  React.Component{
       this.setState({agree : userAuth.uid})  
       }
     });
-    console.log(this.state.currentUser)
   }
 
   

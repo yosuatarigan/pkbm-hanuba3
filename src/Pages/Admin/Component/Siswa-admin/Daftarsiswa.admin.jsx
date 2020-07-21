@@ -7,7 +7,6 @@ const Daftarsiswa = ()=>{
     const title = "SISWA";
    const  columns= [
     { title: 'Name', field: 'nama' },
-    { title: 'Name', field: 'nama' },
     { title: 'Umur', field: 'umur' }]
 
     return(

@@ -38,7 +38,9 @@ import SupervisedUserCircleIcon from '@material-ui/icons/SupervisedUserCircle';
 import Tutor from '../Tutor-admin/Tutor.admin';
 import LocalLibraryIcon from '@material-ui/icons/LocalLibrary';
 import Button from '@material-ui/core/Button';
+import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import {signoutuser,auth} from '../../firebase/firebase.utils';
+import {Route,Redirect} from 'react-router-dom'
 
 // import Button from '@material-ui/core/Button';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
@@ -109,11 +111,11 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-function Sidebar({handlesignoutuser}) {
+function Sidebar({handlesignoutuser,history,match}) {
     const classes = useStyles();
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
-    const [route,setroute] = React.useState("Home");
+    const [route,setroute] = React.useState("Log");
     
 
     const handleDrawerOpen = () => {
@@ -181,7 +183,7 @@ function Sidebar({handlesignoutuser}) {
                 </div>
                 <Divider />
                 <List>
-                    {['Home', 'User', 'Article', 'Siswa','Absensi','Alumni','Tutor'].map((text, index) => (
+                    {['Home','Log', 'User', 'Article', 'Siswa','Absensi','Alumni','Tutor'].map((text, index) => (
                         <ListItem button key={text} onClick={()=> setroute(text)}  >
 
                             <ListItemIcon>{text === 'Home' ? <HomeIcon /> :
@@ -196,6 +198,9 @@ function Sidebar({handlesignoutuser}) {
                                         :
                                     text === "Tutor" ?
                                         <LocalLibraryIcon />
+                                        :
+                                    text === "Log" ?
+                                        <AccessTimeIcon/>
                                         :
                                     text === "Absensi" ?
                                         <FingerprintIcon />
@@ -232,7 +237,7 @@ function Sidebar({handlesignoutuser}) {
             <main className={classes.content}>
                 <div className={classes.toolbar} />
                {
-                   route === "Home" ?
+                   route === "Log" ?
                    <HomeAdmin/>
                    :
                    ( route==="User" ?
@@ -259,10 +264,13 @@ function Sidebar({handlesignoutuser}) {
                    route === "Tutor" ?
                    <Tutor/>
                    :
+                   route === "Pendaftar" ?
+                   <Pendaftar/>
+                   :
                    route === "Galeri" ?
                    <Galeri/>
                    :
-                   <Pendaftar/>
+                   <Redirect to='/'/>
                     )
                }
             </main>

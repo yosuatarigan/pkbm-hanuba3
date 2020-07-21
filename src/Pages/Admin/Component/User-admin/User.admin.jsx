@@ -4,7 +4,8 @@ import React from 'react';
 // import Tambahuser from './tambahuser';
 import Daftaruser from './Daftaruser.admin';
 import {auth, firestore } from '../../firebase/firebase.utils';
-
+import Register from './Signupuser.admin';
+import Tableuser from './tableuser.admin';
 
 class User extends React.Component{
     constructor() {
@@ -77,8 +78,11 @@ class User extends React.Component{
 
     render(){
         return(
-            <div>
-                <Daftaruser/>
+            <div className="flex  items-start ">
+              <div className=" w-25  pa3 mr2"><Register /></div>
+              <div className="w-75 pa3 mr2"><Tableuser  /></div>
+                
+                
             </div>
             
         )

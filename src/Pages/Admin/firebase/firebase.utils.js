@@ -19,6 +19,27 @@ firebase.initializeApp(config);
 export const deletedata = (collection,document)=> { firestore.collection(collection).doc(document).delete()
 };
 
+// const samplereaddata =  () => {
+//   const fetchData = async () => {
+//     const db = firebase.firestore()
+//     const data = await db.collection('nama collection').get()
+//     setdata(data.docs.map(doc => ({...doc.data(), id:doc.id } )))
+//     // console.log(data.docs.map(doc => ({...doc.data(), id:doc.id } )))
+//   }
+//   fetchData()}
+
+  // const realtimeread = ()=>{
+  //   React.useEffect(() => {
+  //     firestore.collection('nama collection')
+  //     .onSnapshot((snapshot)=>{
+  //       const data = snapshot.docs.map((doc)=>({
+  //         id: doc.id,
+  //         ...doc.data()
+  //       }))
+  //       setdata(data)
+  //     })
+  //   }, [refresher])
+  // }
 
 export const adddata = (collection,data) => {
   // Add a new document with a generated id.
