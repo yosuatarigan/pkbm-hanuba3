@@ -1,12 +1,9 @@
 import React from 'react';
-import Flag from './FlagKegiatan';
-import Kegiatan1 from '../../Media/image/belajar1.jpeg';
-import Bareng from '../../Media/image/bareng.jpeg';
-import Diskusi1 from '../../Media/image/diskusi1.jpeg';
-import {firestore} from '../Admin/firebase/firebase.utils';
+import Cardgaleri from './Cardgaleri';
+import {firestore} from '../../Pages/Admin/firebase/firebase.utils';
 
 
-const NoteKegiatan = () => {
+const Galeri = () => {
 	const [data, setdata] = React.useState([]);
 
 	React.useEffect(() => {
@@ -22,9 +19,9 @@ const NoteKegiatan = () => {
 
 	return (
 		<div >
-			<article className='center'>
+			<article className='center pv5'>
 				<header className="tc b--black-70 pv4">
-					<h3 className="f2 fw7 ttu tracked lh-title mt0 mb2 avenir">Kegiatan di Sekolah</h3>
+					<h3 className="f2 fw7 ttu tracked lh-title mt0 mb2 avenir">Galeri</h3>
 					{/* <h4 class="f3 fw4 i lh-title mt0">Siem Reap, Cambodia</h4> */}
 				</header>
 
@@ -32,7 +29,7 @@ const NoteKegiatan = () => {
 					<div class="cf pa2">
 					{data.map((user, i) => {
                 return (
-                    <Flag
+                    <Cardgaleri
                         key={i}
                         title={data[i].title}
 						desc={data[i].desc}
@@ -47,4 +44,4 @@ const NoteKegiatan = () => {
 	);
 }
 
-export default NoteKegiatan;
+export default Galeri;

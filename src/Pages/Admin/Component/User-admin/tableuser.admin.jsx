@@ -1,5 +1,5 @@
 import React from 'react';
-import MaterialTable,{MTableToolbar} from 'material-table';
+import MaterialTable, { MTableToolbar } from 'material-table';
 
 import { forwardRef } from 'react';
 
@@ -18,7 +18,8 @@ import Remove from '@material-ui/icons/Remove';
 import SaveAlt from '@material-ui/icons/SaveAlt';
 import Search from '@material-ui/icons/Search';
 import ViewColumn from '@material-ui/icons/ViewColumn';
-import firebase, { updatedata, adddata, deletedata } from '../../firebase/firebase.utils';
+import { Redirect } from 'react-router-dom';
+import { firestore, deletedata, auth } from '../../firebase/firebase.utils';
 
 const tableIcons = {
   Add: forwardRef((props, ref) => <AddBox {...props} ref={ref} />),
@@ -41,32 +42,63 @@ const tableIcons = {
 };
 
 function Tableuser() {
-    return (
-      <MaterialTable
-        title="Render Image Preview"
-        icons = {tableIcons}
-        columns={[
-          { title: 'Avatar', field: 'imageUrl', render: rowData => <img src={rowData.imageUrl} style={{width: 40, borderRadius: '50%'}}/> },
-          { title: 'Name', field: 'name' },
-          { title: 'Email', field: 'email' },
-        ]}
-        data={[
-          { name: 'Mehmet', surname: 'Baran', birthYear: 1987, birthCity: 63, imageUrl: 'https://avatars0.githubusercontent.com/u/7895451?s=460&v=4' },
-          { name: 'Zerya Betül', surname: 'Baran', birthYear: 2017, birthCity: 34, imageUrl: 'https://avatars0.githubusercontent.com/u/7895451?s=460&v=4' },
-        ]}
-        // components={{
-        //     Toolbar: props => (
-        //       <div>
-        //         <MTableToolbar {...props} />
-        //         <div style={{padding: '0px 10px'}}>
-        //           <button label="Chip 1" color="secondary" style={{marginRight: 5}}>Add User</button>
-        //         </div>
-        //       </div>
-        //     ),
-        //   }}        
-      />
-    )
-  }
-  
+
+  const [data, setdata] = React.useState([]);
+
+  React.useEffect(() => {
+    firestore.collection('users')
+      .onSnapshot((snapshot) => {
+        const data = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data()
+        }))
+        setdata(data)
+      })
+  }, [])
+
+
+
+
+  return (
+    <MaterialTable
+      title="Daftar User "
+      icons={tableIcons}
+      columns={[
+        { title: 'Name', field: 'name' },
+        { title: 'Email', field: 'email' },
+      ]}
+      data={data}
+      editable={{
+        onRowDelete: (oldData) =>
+          new Promise((resolve) => {
+            setTimeout(() => {
+              const user = auth.currentUser;
+              if (auth.currentUser.email === oldData.email){
+                user.delete()
+                deletedata('users',oldData.id)
+               alert('data sudah dihapus, silahkan refresh')
+              }
+              else {
+                alert('Anda hanya boleh menghapus akun sendiri')
+              }
+              resolve();
+            }, 1000);
+          }),
+      }}
+
+    // components={{
+    //     Toolbar: props => (
+    //       <div>
+    //         <MTableToolbar {...props} />
+    //         <div style={{padding: '0px 10px'}}>
+    //           <button label="Chip 1" color="secondary" style={{marginRight: 5}}>Add User</button>
+    //         </div>
+    //       </div>
+    //     ),
+    //   }}        
+    />
+  )
+}
+
 
 export default Tableuser;

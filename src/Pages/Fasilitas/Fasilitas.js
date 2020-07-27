@@ -1,11 +1,25 @@
 import React from 'react';
 import CardFasilitas from './CardFasilitas';
-import Perpustakaan1 from '../../Media/image/perpustakaan.jpeg';
-import Perpustakaan2 from '../../Media/image/dipojokbaca.jpg';
-import belajarmusik from '../../Media/image/alatmusik.jpeg';
-import keterampilan from '../../Media/image/keterampilan.jpeg';
-import jahit from '../../Media/image/jahit.jpeg';
+import {firestore} from '../Admin/firebase/firebase.utils';
+
+
+
 const Fasilitas = () => {
+
+  const [data, setdata] = React.useState([]);
+
+    React.useEffect(() => {
+        firestore.collection('fasilitas')
+        .onSnapshot((snapshot)=>{
+          const data = snapshot.docs.map((doc)=>({
+            id: doc.id,
+            ...doc.data()
+          }))
+          setdata(data)
+        })
+      }, [])
+
+
   return (
     <div className="pv2 black bg-washed-green">
       <p className=" tc f2"> Fasilitas</p>
@@ -15,12 +29,18 @@ const Fasilitas = () => {
 
       <section className="mw7 center avenir">
         
-      <CardFasilitas name={'1. Perpustakaan'} gambar1={Perpustakaan1}/>
-      <CardFasilitas name={'2. Komputer'}/>
-      <CardFasilitas name={'3. Alat Musik'} gambar1={belajarmusik}/>
-      <CardFasilitas name={'4. Belajar Keterampilan'} gambar1={keterampilan}/>
-      <CardFasilitas name={'5. Belajar Kewirausahaan'} gambar1={jahit}/>
-      <CardFasilitas name={'6. Pojok Baca di Klinik Medica kwala Bekala'} gambar1={Perpustakaan2}/>
+      {data.map((user, i) => {
+                return (
+                    
+                    <CardFasilitas
+                        key={i}
+                        namafasilitas={data[i].namafasilitas}
+                        desc = {data[i].desc}
+                        coverurl = {data[i].coverurl}
+                    />
+                   
+                );
+            })}
 
 
 

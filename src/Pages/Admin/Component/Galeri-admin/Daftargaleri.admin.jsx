@@ -1,16 +1,13 @@
 import React from 'react';
 import Materialtable from '../Materialtable-admin/Materialtable.admin';
 
-const Daftararticle = ()=>{
+const Daftargaleri = ()=>{
 
-    const collection="article";
-    const title = "Article";
+    const collection="galeri";
+    const title = "Galeri";
    const  columns= [
-    { title: 'Judul', field: 'title' },
-    { title: 'Deskripsi', field: 'desc' },
     { title: 'Gambar', field: 'coverurl' , render: rowData => <img src={rowData.coverurl} style={{width: 50, borderRadius: '50%'}}/>},
-    { title: 'Kategory', field: 'category' },
-    { title: 'Tanggal Pembuatan', field: 'createdAt' },
+  
   ]
   
 
@@ -19,4 +16,4 @@ const Daftararticle = ()=>{
     )
 }
 
-export default Daftararticle;
+export default Daftargaleri;

@@ -5,7 +5,7 @@ import Navigation from './components/Navigation/Navigation';
 import Info from './Pages/Info/Info';
 import Footer from './Pages/Footer/Footer';
 import Alumni from './Pages/Alumni/Alumni';
-import Tutor from './Pages/Tentor/Tentor';
+import Tutor from './Pages/Tutor/Tutor';
 import Fasilitas from './Pages/Fasilitas/Fasilitas';
 import Login from './Pages/Admin/Login';
 import Admin from './Pages/Admin/Admin';
@@ -13,6 +13,10 @@ import { Switch, Route,Redirect } from 'react-router-dom';
 import Home from './Pages/Home/Home';
 import 'tachyons';
 import Sidebar from './Pages/Admin/Component/Sidebar-admin/sidebar.admin';
+import Navtop from './components/Navigation/Navtop';
+import Header from './components/Headers/Header';
+import Galeri from './components/Galeri/Galeri';
+import Pendaftar from './components/Pendaftaran/Pendaftaran';
 
 
 class App extends  React.Component{
@@ -50,14 +54,16 @@ class App extends  React.Component{
     return(
       <div>
         {/* <Navigation onRouteChange={this.onRouteChange} /> */}
-        <Navigation/>
         
+        <Navigation/>
         <div>
           <Switch>
             <Route exact path='/' component={Home}/>
             <Route path='/alumni' component={Alumni}/>
             <Route path='/tutor' component={Tutor}/>
             <Route path='/info' component={Info}/>
+            <Route path='/galeri' component={Galeri}/>
+            <Route path='/pendaftaran' component={Pendaftar}/>
             <Route path='/admin'  render={() =>
               this.state.agree == this.state.currentUser.uid ? (
                 <Sidebar handlesignoutuser={this.handlesignoutuser}/>

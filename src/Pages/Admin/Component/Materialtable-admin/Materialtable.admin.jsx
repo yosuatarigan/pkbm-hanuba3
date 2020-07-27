@@ -89,6 +89,7 @@ export default function Materialtable({columns,collection,title}) {
       options={{
         exportButton: true
       }}
+      
       editable={{
         onRowAdd: (newData) =>
           new Promise((resolve) => {

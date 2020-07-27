@@ -17,8 +17,8 @@ const Navigation = ({history,match}) => {
     const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
     return (
-        <div>
-        <Navbar color="black bg-washed-green " light expand="md">
+        <div className="fixed-top">
+        <Navbar color="black bg-blue " light expand="md">
           <NavbarBrand onClick={() => history.push(`${match.url}`)}>PKBM HANUBA</NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
@@ -31,7 +31,16 @@ const Navigation = ({history,match}) => {
               </NavItem>
               <NavItem>
                 <NavLink onClick={() => history.push(`${match.url}fasilitas`)}>Fasilitas</NavLink>
-              </NavItem>              
+              </NavItem>   
+              <NavItem>
+                <NavLink onClick={() => history.push(`${match.url}galeri`)}>Galeri</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink onClick={() => history.push(`${match.url}pendaftaran`)}>Pendaftaran</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="http://setara.kemdikbud.go.id/" target="_blank">Setara Daring</NavLink>
+              </NavItem>           
             </Nav>
             <NavbarText className="pr3" onClick={() => history.push(`${match.url}admin`)} >Admin</NavbarText>
             <NavbarText onClick={() => history.push(`${match.url}info`)}>Info</NavbarText>

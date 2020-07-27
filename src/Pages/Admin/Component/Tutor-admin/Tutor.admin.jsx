@@ -1,19 +1,14 @@
 import React from 'react';
-import Materialtable from '../../Component/Materialtable-admin/Materialtable.admin';
+import Daftartutor from './Daftartutor.admin';
+import Addtutor from './Addtutor.admin';
 
-const Daftartutor = ()=>{
-
-    const collection="tutor";
-    const title = "Tutor";
-   const  columns= [
-    { title: 'Nama', field: 'nama' },
-    { title: 'Bidang', field: 'bidang' },
-    { title: 'Gambar', field: 'cover' },
-  ]
-
+const Article = ()=>{
     return(
-        <Materialtable columns={columns} collection={collection} title={title}/>
+        <div flex  items-start>
+            <Addtutor/>
+           <Daftartutor/>
+        </div>
     )
 }
 
-export default Daftartutor;
+export default Article;

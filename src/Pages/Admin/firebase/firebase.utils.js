@@ -1,6 +1,7 @@
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
+import 'firebase/storage';
 
 const config = {
   apiKey: "AIzaSyBcF_ksZnSl8Z87kRi0qyom-UvpO5HGdDM",
@@ -41,16 +42,26 @@ export const deletedata = (collection,document)=> { firestore.collection(collect
   //   }, [refresher])
   // }
 
+ export const hapuspengguna = ()=>{
+  const user = firebase.auth().currentUser;
+
+  user.delete().then(function() {
+    alert('berhasil dihapuss')
+  }).catch(function(error) {
+    alert('gagal menghapus')
+  });
+ } 
+
 export const adddata = (collection,data) => {
   // Add a new document with a generated id.
   firestore.collection(collection).add({
     ...data
   })
     // .then(function (docRef) {
-    //   alert("Menambahkan data berhasil")
+    //   alert(docRef)
     // })
     // .catch(function (error) {
-    //   alert("error data")
+    //   alert(error)
     // });
 }
 
@@ -89,10 +100,12 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
 export const database  = firebase.database;
+export const storage = firebase.storage();
 
 const provider = new firebase.auth.GoogleAuthProvider();
 provider.setCustomParameters({ prompt: 'select_account' });
 export const signInWithGoogle = () => auth.signInWithPopup(provider);
+
 
 
 export const createuserviaemailandpassword = (email,password)=>{

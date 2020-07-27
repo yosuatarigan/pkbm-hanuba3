@@ -4,17 +4,21 @@ import WellcomeText from '../../components/Jumbotron/WellcomeText';
 import CardNavs from '../../components/Card/CardNavs';
 import Info from '../Info/Info';
 import NoteKegiatan from '../Kegiatan/NoteKegiatan';
-import Landingpage from '../../components/LandingImage/Landingimages';
+import Landing from '../../components/LandingImage/Landing';
+import Cardfitur from '../../components/Cardfitur/Cardfitur';
+import Article from '../../components/Article/Article';
 
 const Home = () => {
     return (
         <div>
             <div>
-                <CarouselWithText/>
+                <Landing/>
             </div>
-            <WellcomeText />
-            <CardNavs  />
+            {/* <WellcomeText /> */}
+            {/* <CardNavs  /> */}
+            <Cardfitur/>
             <NoteKegiatan />
+            <Article/>
             <Info />
         </div>
     )

@@ -2,14 +2,28 @@ import React from 'react';
 
 const Navigation = ({history,push})=>{
     return(
-        <header class="bg-black-90 fixed w-100 ph3 pv3 pv4-ns ph4-m ph5-l">
-  <nav class="f6 fw6 ttu tracked">
-    <a class="link dim white dib mr3" href="#" title="Home">Home</a>
-    <a class="link dim white dib mr3" href="#" title="About">About</a>
-    <a class="link dim white dib mr3" href="#" title="Store">Store</a>
-    <a class="link dim white dib" href="#" title="Contact">Contact</a>
-  </nav>
-</header>
+      <header id="header" class="fixed-top">
+      <div class="container d-flex align-items-center">
+  
+        <h1 class="logo mr-auto"><a href="index.html">PKBM HANUBA</a></h1>
+  
+        <nav class="nav-menu d-none d-lg-block">
+          <ul>
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="#artikel">Artikel</a></li>
+            <li><a href="#kegiatan">Kegiatan</a></li>
+            <li><a href="#fasilitas">Fasilitas</a></li>
+            <li><a href="#tutor">Tutor</a></li>
+            <li><a href="#alumni">Alumni</a></li>
+            <li><a href="https://setara.kemdikbud.go.id">Setara Daring</a></li>
+            <li><a href="#admin">Admin</a></li>
+            <li><a href="#info">Info</a></li>
+  
+          </ul>
+        </nav>
+  
+      </div>
+    </header>
     )
 }
 

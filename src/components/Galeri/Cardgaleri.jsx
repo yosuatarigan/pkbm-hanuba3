@@ -5,15 +5,13 @@ const Cardgaleri = ({title,desc,coverurl}) => {
         <div>
             
                     <div class="fl w-third pa2">
-                        <a href="/" class="db link dim tc">
-                            <img alt="images" src={coverurl} width="400" height="auto" />
+                            <img alt="images" src={coverurl} width="200" height="200" />
                             <dl class="mt2 f6 lh-copy">
                                 <dt class="clip">Title</dt>
     <dd class="ml0 black truncate w-100">{title}</dd>
                                 <dt class="clip">Artist</dt>
     <dd class="ml0 gray truncate w-100">{desc}</dd>
                             </dl>
-                        </a>
                     </div>
                    
               

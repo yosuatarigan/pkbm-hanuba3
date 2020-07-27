@@ -1,10 +1,12 @@
 import React from 'react';
-import Cardgaleri from './CardGaleri.admin';
+import Daftargaleri from './Daftargaleri.admin';
+import Addgaleri from './Galeriadd.admin';
 
 const Galeri = ()=>{
     return(
         <div>
-            <Cardgaleri/>
+            <Addgaleri/>
+            <Daftargaleri/>
         </div>
     )
 }

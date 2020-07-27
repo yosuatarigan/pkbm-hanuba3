@@ -39,8 +39,10 @@ import Tutor from '../Tutor-admin/Tutor.admin';
 import LocalLibraryIcon from '@material-ui/icons/LocalLibrary';
 import Button from '@material-ui/core/Button';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
+import Fasilitas from '../Fasilitas-admin/Fasilitas.admin';
 import {signoutuser,auth} from '../../firebase/firebase.utils';
 import {Route,Redirect} from 'react-router-dom'
+import WidgetsIcon from '@material-ui/icons/Widgets';
 
 // import Button from '@material-ui/core/Button';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
@@ -214,12 +216,15 @@ function Sidebar({handlesignoutuser,history,match}) {
                 </List>
                 <Divider />
                 <List>
-                    {['Kritik & Saran', 'Setting', 'Galeri','Pendaftar'].map((text, index) => (
+                    {['Kritik & Saran','Fasilitas' ,'Setting', 'Galeri','Pendaftar'].map((text, index) => (
                         <ListItem button key={text} onClick={()=> setroute(text)} >
                             <ListItemIcon>{text === "Kritik & Saran" ? <ChatBubbleIcon /> :
                                 (
                                     text === "Setting" ?
                                         <SettingsIcon />
+                                        :
+                                        text ==="Fasilitas" ?
+                                        <WidgetsIcon/>
                                         :
                                         text ==="Galeri" ?
                                         <PhotoAlbumIcon/>
@@ -251,6 +256,9 @@ function Sidebar({handlesignoutuser,history,match}) {
                    :
                    route === "Kritik & Saran" ?
                    <Kritikdansaran/>
+                   :
+                   route === "Fasilitas" ?
+                   <Fasilitas/>
                    :
                    route === "Setting" ?
                    <Setting/>

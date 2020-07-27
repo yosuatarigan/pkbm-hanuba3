@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
+import CardTutor from './CardTutor';
 import {firestore} from '../Admin/firebase/firebase.utils';
-import Cardtampil from './Cardtampilpesan';
 
-const Tampilsaran = ()=>{
 
+const Tutor = ()=>{
     const [data, setdata] = React.useState([]);
 
     React.useEffect(() => {
-        firestore.collection('kritikdanpesan')
+        firestore.collection('tutor')
         .onSnapshot((snapshot)=>{
           const data = snapshot.docs.map((doc)=>({
             id: doc.id,
@@ -18,18 +18,24 @@ const Tampilsaran = ()=>{
       }, [])
 
     return (
-        <div>
+        <div className="tc pv5">
+            <p className="f1">Tutor Yayasan PKBM Hanuba</p>
             {data.map((user, i) => {
                 return (
-                    <Cardtampil
+                    
+                    <CardTutor
                         key={i}
-                        nama={data[i].displayName}
-                        pesankritik={data[i].kritikdanpesan}
+                        nama={data[i].nama}
+                        bidang = {data[i].bidang}
+                        coverurl = {data[i].coverurl}
                     />
+                   
                 );
             })}
         </div>
     );
 }
+    
 
-export default Tampilsaran;
+
+export default Tutor;

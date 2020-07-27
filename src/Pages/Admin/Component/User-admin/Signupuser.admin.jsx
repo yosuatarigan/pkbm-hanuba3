@@ -1,5 +1,5 @@
 import React from 'react';
-import {firestore} from '../../firebase/firebase.utils';
+import {firestore,createuserviaemailandpassword} from '../../firebase/firebase.utils';
 
 class  Register extends React.Component{
   constructor(props){
@@ -11,15 +11,17 @@ class  Register extends React.Component{
     }
   }
 
-  adddata = () => {
-    // Add a new document with a generated id.
+  adddata = () =>  {
+    // Add a new document with a generated id.\
+    const {email,password,name} = this.state
     firestore.collection('users').add({
-      email : this.state.email,
-      name : this.state.name,
-      password : this.state.password
+      email : email,
+      name : name,
+      password : password
     })
       .then(function (docRef) {
-        alert("Menambahkan data berhasil")
+        createuserviaemailandpassword(email,password)
+        alert("data berhasil ditambahkan")
       })
       .catch(function (error) {
         alert("error data")
