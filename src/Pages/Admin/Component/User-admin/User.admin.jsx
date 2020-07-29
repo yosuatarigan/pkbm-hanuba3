@@ -2,7 +2,6 @@ import React from 'react';
 // import Card from './Card';
 // import Navuser from './Navuser';
 // import Tambahuser from './tambahuser';
-import Daftaruser from './Daftaruser.admin';
 import {auth, firestore } from '../../firebase/firebase.utils';
 import Register from './Signupuser.admin';
 import Tableuser from './tableuser.admin';

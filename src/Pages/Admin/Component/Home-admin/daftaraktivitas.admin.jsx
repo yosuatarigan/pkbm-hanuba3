@@ -6,7 +6,7 @@ const Daftarkritikdanpesan = ()=>{
     const collection="aktivitas";
     const title = "Aktivitas Server PKBM HANUBA MEDAN";
    const  columns= [
-    { title: 'Nama', field: 'displayName' },
+    { title: 'Email', field: 'emailuser' },
     { title: 'Aksi', field: 'aksi' }]
 
     return(

@@ -6,7 +6,7 @@ const Daftargaleri = ()=>{
     const collection="galeri";
     const title = "Galeri";
    const  columns= [
-    { title: 'Gambar', field: 'coverurl' , render: rowData => <img src={rowData.coverurl} style={{width: 50, borderRadius: '50%'}}/>},
+    { title: 'Gambar', field: 'coverurl' , render: rowData => <img src={rowData.coverurl} alt="" style={{width: 50, borderRadius: '50%'}}/>},
   
   ]
   

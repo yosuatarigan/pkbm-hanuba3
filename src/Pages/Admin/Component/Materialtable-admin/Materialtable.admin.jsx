@@ -39,7 +39,7 @@ const tableIcons = {
   ViewColumn: forwardRef((props, ref) => <ViewColumn {...props} ref={ref} />)
 };
 
-export default function Materialtable({columns,collection,title}) {
+export default function Materialtable({columns,collection,title,emailuser}) {
     //columnt berbentuk Array
   
 
@@ -96,6 +96,10 @@ export default function Materialtable({columns,collection,title}) {
             setTimeout(() => {
               resolve();
               adddata(collection,newData)
+              if(collection==='artikel'){
+                const objeknya = newData.title
+                adddata('aktivitas',{ emailuser,aksi : `menambahkan ${collection} ${objeknya}  `})
+              }
               
               handlerefresh();
             }, 1000);

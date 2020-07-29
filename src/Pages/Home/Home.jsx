@@ -6,7 +6,7 @@ import Info from '../Info/Info';
 import NoteKegiatan from '../Kegiatan/NoteKegiatan';
 import Landing from '../../components/LandingImage/Landing';
 import Cardfitur from '../../components/Cardfitur/Cardfitur';
-import Article from '../../components/Article/Article';
+import Article from '../../components/Article/ArticlePreview';
 
 const Home = () => {
     return (

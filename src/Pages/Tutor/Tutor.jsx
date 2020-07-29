@@ -18,7 +18,7 @@ const Tutor = ()=>{
       }, [])
 
     return (
-        <div className="tc pv5">
+        <div className="tc pv5 black bg-lightest-blue">
             <p className="f1">Tutor Yayasan PKBM Hanuba</p>
             {data.map((user, i) => {
                 return (

@@ -40,12 +40,11 @@ import LocalLibraryIcon from '@material-ui/icons/LocalLibrary';
 import Button from '@material-ui/core/Button';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import Fasilitas from '../Fasilitas-admin/Fasilitas.admin';
-import {signoutuser,auth} from '../../firebase/firebase.utils';
-import {Route,Redirect} from 'react-router-dom'
+import {auth} from '../../firebase/firebase.utils';
+import {Redirect} from 'react-router-dom'
 import WidgetsIcon from '@material-ui/icons/Widgets';
+import firebase from '../../firebase/firebase.utils';
 
-// import Button from '@material-ui/core/Button';
-import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -118,7 +117,9 @@ function Sidebar({handlesignoutuser,history,match}) {
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
     const [route,setroute] = React.useState("Log");
+    const [emailuser, setemailuser] = React.useState("");
     
+
 
     const handleDrawerOpen = () => {
         setOpen(true);
@@ -134,6 +135,18 @@ function Sidebar({handlesignoutuser,history,match}) {
         handlesignoutuser()
 
     }
+
+    React.useEffect(() => {
+        firebase.auth().onAuthStateChanged(function(user) {
+            if (user) {
+              // User is signed in.
+              setemailuser(user.email)
+            } else {
+             
+              // ...
+            }
+          })
+      }, [])
 
     return (
         <div className={classes.root}>
@@ -246,37 +259,37 @@ function Sidebar({handlesignoutuser,history,match}) {
                    <HomeAdmin/>
                    :
                    ( route==="User" ?
-                   <User/>
+                   <User emailuser={emailuser}/>
                    :
                    route === "Article" ?
-                   <Article/>
+                   <Article emailuser={emailuser}/>
                    :
                    route === "Siswa" ?
-                   <Siswa/>
+                   <Siswa emailuser={emailuser}/>
                    :
                    route === "Kritik & Saran" ?
-                   <Kritikdansaran/>
+                   <Kritikdansaran emailuser={emailuser}/>
                    :
                    route === "Fasilitas" ?
-                   <Fasilitas/>
+                   <Fasilitas emailuser={emailuser}/>
                    :
                    route === "Setting" ?
-                   <Setting/>
+                   <Setting emailuser={emailuser}/>
                    :
                    route === "Absensi" ?
-                   <Absensi/>
+                   <Absensi emailuser={emailuser}/>
                    :
                    route === "Alumni" ?
-                   <Alumni/>
+                   <Alumni emailuser={emailuser}/>
                    :
                    route === "Tutor" ?
-                   <Tutor/>
+                   <Tutor emailuser={emailuser}/>
                    :
                    route === "Pendaftar" ?
-                   <Pendaftar/>
+                   <Pendaftar emailuser={emailuser}/>
                    :
                    route === "Galeri" ?
-                   <Galeri/>
+                   <Galeri emailuser={emailuser}/>
                    :
                    <Redirect to='/'/>
                     )

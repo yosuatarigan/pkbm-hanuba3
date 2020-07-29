@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Alumni.css';
 import CardAlumni from './CardAlumni';
 import firebase, {adddata, firestore} from '../Admin/firebase/firebase.utils';
 
@@ -31,35 +32,35 @@ React.useEffect(() => {
 }, [])
 
   return (
-    <div className='tc pv5'>
+    <div className='tc pv5 black bg-lightest-blue'>
         <p className="f3 bold">ALUMNI YAYASAN PKBM HANUBA</p>
 
         <article className="bg-light-green br3 ba dark-gray b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
             <main className="pa4 black-80">
 
                 <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
-                    <legend className="f1 fw6 ph0 mh0">ALUMNI</legend>
-                    <div className="mt3">
+                    <legend className="f4 fw6 ph0 mh0">ALUMNI</legend>
+                    <div className="mt2">
                         <label className="db fw6 lh-copy f6 " >Nama</label>
-                        <input onChange={(e)=>setnama(e.target.value)} className="pa2 input-reset ba bg-transparent   w-100"
+                        <input onChange={(e)=>setnama(e.target.value)} className="pa1 input-reset ba bg-transparent   w-100"
 
                             type="text" name="nama" id="nama" />
                     </div>
                     <div className="mt3">
                         <label className="db fw6 lh-copy f6 " >Pekerjaan</label>
-                        <input onChange={(e)=>setpekerjaan(e.target.value)} className="pa2 input-reset ba bg-transparent  w-100"
+                        <input onChange={(e)=>setpekerjaan(e.target.value)} className="pa1 input-reset ba bg-transparent  w-100"
 
                             type="text" name="pekerjaan" id="pekerjaan" />
                     </div>
                     <div className="mt3">
                         <label className="db fw6 lh-copy f6">Tahun Ajaran</label>
-                        <input onChange={(e)=>settahun(e.target.value)} className="b pa2 input-reset ba bg-transparent   w-100"
+                        <input onChange={(e)=>settahun(e.target.value)} className="b pa1 input-reset ba bg-transparent   w-100"
 
                             type="text" name="tahunajaran" id="tahunajaran" />
                     </div>
                     <div className="mt3">
                         <label className="db fw6 lh-copy f6">Foto</label>
-                        <input onChange={(e)=>setcover(e.target.files[0])} className="b pa2 input-reset ba bg-transparent   w-100"
+                        <input onChange={(e)=>setcover(e.target.files[0])} className="b pa1 input-reset ba bg-transparent   w-100"
 
                             type="file" name="tahunajaran" id="foto" />
                     </div>
@@ -72,6 +73,7 @@ React.useEffect(() => {
         
         {data.map((user, i) => {
             return (
+               
                 <CardAlumni
                     key={i}
                     nama={data[i].nama}
@@ -79,6 +81,7 @@ React.useEffect(() => {
                     pekerjaan={data[i].pekerjaan}
                     tahun ={data[i].tahun}
                 />
+                
             );
         })}
 

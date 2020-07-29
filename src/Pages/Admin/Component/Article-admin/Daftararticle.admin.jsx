@@ -1,7 +1,7 @@
 import React from 'react';
 import Materialtable from '../Materialtable-admin/Materialtable.admin';
 
-const Daftararticle = ()=>{
+const Daftararticle = ({emailuser})=>{
 
     const collection="article";
     const title = "Article";
@@ -15,7 +15,7 @@ const Daftararticle = ()=>{
   
 
     return(
-        <Materialtable columns={columns} collection={collection} title={title}/>
+        <Materialtable columns={columns} collection={collection} title={title} emailuser={emailuser} />
     )
 }
 

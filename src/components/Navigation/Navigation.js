@@ -22,7 +22,7 @@ const Navigation = ({history,match}) => {
           <NavbarBrand onClick={() => history.push(`${match.url}`)}>PKBM HANUBA</NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
-            <Nav className="mr-auto" navbar>
+            <Nav className="mr-auto white" navbar>
             <NavItem>
                 <NavLink onClick={() => history.push(`${match.url}alumni`)} >Alumni</NavLink>
               </NavItem>
@@ -37,6 +37,9 @@ const Navigation = ({history,match}) => {
               </NavItem>
               <NavItem>
                 <NavLink onClick={() => history.push(`${match.url}pendaftaran`)}>Pendaftaran</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink onClick={() => history.push(`${match.url}article`)}>Article</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="http://setara.kemdikbud.go.id/" target="_blank">Setara Daring</NavLink>

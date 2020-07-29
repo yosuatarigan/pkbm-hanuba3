@@ -3,7 +3,6 @@ import {adddata} from '../Admin/firebase/firebase.utils';
 
 const Kritik = ()=>{
 
-  const [data, setdata] = React.useState('');
   const [displayName, setdisplayName] = React.useState('');
   const [kritikdanpesan, setkritikdanpesan] = React.useState('');
 
@@ -12,7 +11,7 @@ const Kritik = ()=>{
   }    
 
   return (
-    <div className="tc pa4 black-80">
+    <div className="tc pa4 black-80 black bg-lightest-blue">
         <div className='tc'> 
             <label for="comment" className="f6 b db mb2">Kritik dan Saran <span className="normal black-60"></span></label>
              <text>Nama :</text> <input type='text' onChange={(e)=>setdisplayName(e.target.value)} />

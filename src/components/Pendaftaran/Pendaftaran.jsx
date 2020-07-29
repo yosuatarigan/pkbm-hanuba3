@@ -12,6 +12,7 @@ const Register = () => {
     const [alamat, setalamat] = React.useState("");
     const [kelurahan, setkelurahan] = React.useState("");
     const [kecamatan,setkecamatan ] = React.useState("");
+    const [kota,setkota ] = React.useState("");
     const [provinsi,setprovinsi ] = React.useState("");
     const [kodepos,setkodepos ] = React.useState("");
     const [noijazah, setnoijazah ] = React.useState("");
@@ -33,7 +34,7 @@ const Register = () => {
     const [namawali, setnamawali ] = React.useState("");
     const [tahunlahirwali, settahunlahirwali ] = React.useState("");
     const [pekerjaanwali, setpekerjaanwali ] = React.useState("");
-    const [pendidikanterakhirnwali, setpendidikanterakhirwali ] = React.useState("");
+    const [pendidikanterakhirwali, setpendidikanterakhirwali ] = React.useState("");
     const [nohpwali, setnohpwali ] = React.useState("");
 
 
@@ -43,9 +44,10 @@ const Register = () => {
         // const storageRef = firebase.storage().ref(`images/${cover.name}`)
         // await storageRef.put(cover)
         // const data =  await storageRef.getDownloadURL()
-        if(namalengkap,tempatdantanggallahir,nik,jeniskelamin,agama,alamat,kelurahan,kecamatan,provinsi,noijazah,noskhu,tahuntamat,rencanaprogram,nohppribadi,namaayah,tahunlahirayah,pekerjaanayah,pendidikanterakhirayah,nohpayah,namaibu,tahunlahiribu,pekerjaanibu,pendidikanterakhiribu,nohpibu,namawali,tahunlahirwali,pekerjaanwali,pendidikanterakhirnwali && nohpwali !== ""){
-            console.log(namalengkap,tempatdantanggallahir,nik,nisn,jeniskelamin,agama,alamat,kelurahan,kecamatan,provinsi,kodepos,noijazah,noskhu,tahuntamat,rencanaprogram,email,nohppribadi,namaayah,tahunlahirayah,pekerjaanayah,pendidikanterakhirayah,nohpayah,namaibu,tahunlahiribu,pekerjaanibu,pendidikanterakhiribu,nohpibu,namawali,tahunlahirwali,pekerjaanwali,pendidikanterakhirnwali,nohpwali)
-            alert("data berhasil ditambahkan")
+        if(namalengkap,tempatdantanggallahir,nik,jeniskelamin,agama,alamat,kelurahan,kecamatan,provinsi,noijazah,noskhu,tahuntamat,rencanaprogram,nohppribadi,namaayah,tahunlahirayah,pekerjaanayah,pendidikanterakhirayah,nohpayah,namaibu,tahunlahiribu,pekerjaanibu,pendidikanterakhiribu,nohpibu,namawali,tahunlahirwali,pekerjaanwali,pendidikanterakhirwali && nohpwali !== ""){
+            adddata('pendaftar',{namalengkap,tempatdantanggallahir,nik,nisn,jeniskelamin,agama,alamat,kelurahan,kecamatan,kota,provinsi,kodepos,noijazah,noskhu,tahuntamat,rencanaprogram,email,nohppribadi,namaayah,tahunlahirayah,pekerjaanayah,pendidikanterakhirayah,nohpayah,namaibu,tahunlahiribu,pekerjaanibu,pendidikanterakhiribu,nohpibu,namawali,tahunlahirwali,pekerjaanwali,pendidikanterakhirwali,nohpwali})
+            alert('data sudah ditambah')
+            
          }
          else{
             
@@ -56,8 +58,8 @@ const Register = () => {
     
 
 
-    return (
-        <article className="pv5 br3 ba bg-light-green b--black-10  w-100 pb3 w-50-m w-25-l mw6 shadow-5 center">
+    return (<div className="black bg-lightest-blue">
+        <article className=" pv5 br3 ba bg-light-green b--black-10  w-100 pb3 w-50-m w-25-l mw6 shadow-5 center">
            
             <main className="pa4 black-80">
 
@@ -92,8 +94,8 @@ const Register = () => {
                         <label className="db fw6 lh-copy f6 " >Jenis Kelamin</label>
                         <select id="category" name="category" onChange={(e)=>setjeniskelamin(e.target.value)}>
                         <option value="">...</option>
-                            <option value="Libur">Laki-laki</option>
-                            <option value="Event">Perempuan</option>
+                            <option value="Laki-laki">Laki-laki</option>
+                            <option value="Perempuan">Perempuan</option>
                         </select>
                     </div>
                     <div className="mt3">
@@ -118,6 +120,12 @@ const Register = () => {
                         <label className="db fw6 lh-copy f6 " >Kecamatan</label>
                         <input className="pa1 input-reset ba bg-transparent hover-bg-black  w-100"
                             onChange={(e)=>setkecamatan(e.target.value)}
+                            type="text-" name="bidang" id="bidang" />
+                    </div>
+                    <div className="mt3">
+                        <label className="db fw6 lh-copy f6 " >Kota</label>
+                        <input className="pa1 input-reset ba bg-transparent hover-bg-black  w-100"
+                            onChange={(e)=>setkota(e.target.value)}
                             type="text-" name="bidang" id="bidang" />
                     </div>
                     <div className="mt3">
@@ -269,7 +277,8 @@ const Register = () => {
                     <input  onClick={handleupload} className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" type="submit" value="Register" />
                 </div>
             </main>
-        </article>)
+        </article>
+        </div>)
 }
 
 export default Register;

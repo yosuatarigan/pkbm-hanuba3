@@ -17,6 +17,7 @@ import Navtop from './components/Navigation/Navtop';
 import Header from './components/Headers/Header';
 import Galeri from './components/Galeri/Galeri';
 import Pendaftar from './components/Pendaftaran/Pendaftaran';
+import Article from './components/Article/Article';
 
 
 class App extends  React.Component{
@@ -63,6 +64,7 @@ class App extends  React.Component{
             <Route path='/tutor' component={Tutor}/>
             <Route path='/info' component={Info}/>
             <Route path='/galeri' component={Galeri}/>
+            <Route path='/article' component={Article}/>
             <Route path='/pendaftaran' component={Pendaftar}/>
             <Route path='/admin'  render={() =>
               this.state.agree == this.state.currentUser.uid ? (

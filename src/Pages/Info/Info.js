@@ -2,7 +2,7 @@ import React from 'react';
 import Program from './program';
 import VisidanMisi from './visidanmisi';
 import Kritik from './kritikdansaran';
-import Tampilpesan from './Tampilkritikdansaran';
+// import Tampilpesan from './Tampilkritikdansaran';
 
 const Info = () => {
     return (
@@ -42,7 +42,7 @@ const Info = () => {
         
         <Kritik/>
         <hr/>
-        <Tampilpesan/>
+        {/* <Tampilpesan/> */}
         </div>
 
 

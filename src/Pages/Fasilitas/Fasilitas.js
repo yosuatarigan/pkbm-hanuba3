@@ -21,7 +21,7 @@ const Fasilitas = () => {
 
 
   return (
-    <div className="pv2 black bg-washed-green">
+    <div className="pv2 black bg-lightest-blue">
       <p className=" tc f2"> Fasilitas</p>
       
       

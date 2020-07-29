@@ -5,7 +5,7 @@ const Cardgaleri = ({title,desc,coverurl}) => {
         <div>
             
                     <div class="fl w-third pa2">
-                            <img alt="images" src={coverurl} width="200" height="200" />
+                            <img alt="images" src={coverurl}   />
                             <dl class="mt2 f6 lh-copy">
                                 <dt class="clip">Title</dt>
     <dd class="ml0 black truncate w-100">{title}</dd>

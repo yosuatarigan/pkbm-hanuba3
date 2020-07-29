@@ -1,7 +1,7 @@
 import React from 'react';
 import  firebase, { adddata} from '../../firebase/firebase.utils';
 
-const Register = () => {
+const Register = ({emailuser}) => {
 
     const [title, settitle] = React.useState("");
     const [desc, setdesc] = React.useState("");
@@ -16,6 +16,8 @@ const Register = () => {
         await storageRef.put(cover)
         const data =  await storageRef.getDownloadURL()
        adddata('article',{title,desc,coverurl : data,category,createdAt})
+       adddata('aktivitas',{emailuser, aksi : `menambahkan article ${title} pada ${createdAt}`} )
+
     }
 
 

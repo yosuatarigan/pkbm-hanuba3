@@ -42,6 +42,8 @@ export const deletedata = (collection,document)=> { firestore.collection(collect
   //   }, [refresher])
   // }
 
+// 
+
  export const hapuspengguna = ()=>{
   const user = firebase.auth().currentUser;
 
