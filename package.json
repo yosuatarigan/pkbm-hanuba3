@@ -1,5 +1,6 @@
 {
   "name": "pkbm3",
+  "homepage": "https://yosuatarigan.github.io/pkbm-hanuba3",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,6 +11,7 @@
     "@testing-library/user-event": "^7.2.1",
     "bootstrap": "^4.5.0",
     "fontsource-roboto": "^2.1.4",
+    "gh-pages": "^3.1.0",
     "material-table": "^1.65.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -19,6 +21,8 @@
     "tachyons": "^4.12.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+   "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
