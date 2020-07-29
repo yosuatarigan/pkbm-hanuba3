@@ -64,7 +64,7 @@ const Register = () => {
             <main className="pa4 black-80">
 
                 <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
-                    <legend className="f1 fw6 ph0 mh0">Form Pendaftaran</legend>
+                    <legend className="f2 fw6 ph0 mh0">Pendaftaran Siswa Baru</legend>
                     <legend className="f3 fw6 ph0 mh0">Data Pribadi</legend>
                     <div >
                         <label className="db fw6 lh-copy f6 " >Nama Lengkap</label>
