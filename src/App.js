@@ -59,21 +59,21 @@ class App extends  React.Component{
         <Navigation/>
         <div>
           <Switch>
-            <Route exact path='../' component={Home}/>
-            <Route path='../alumni' component={Alumni}/>
-            <Route path='../tutor' component={Tutor}/>
-            <Route path='../info' component={Info}/>
-            <Route path='../galeri' component={Galeri}/>
-            <Route path='../article' component={Article}/>
-            <Route path='../pendaftaran' component={Pendaftar}/>
-            <Route path='../admin'  render={() =>
+            <Route exact path='/' component={Home}/>
+            <Route path='/alumni' component={Alumni}/>
+            <Route path='/tutor' component={Tutor}/>
+            <Route path='/info' component={Info}/>
+            <Route path='/galeri' component={Galeri}/>
+            <Route path='/article' component={Article}/>
+            <Route path='/pendaftaran' component={Pendaftar}/>
+            <Route path='/admin'  render={() =>
               this.state.agree == this.state.currentUser.uid ? (
                 <Sidebar handlesignoutuser={this.handlesignoutuser}/>
               ) : (
                 <Login />
               )
             }/>
-            <Route path='../fasilitas' component={Fasilitas}/>
+            <Route path='/fasilitas' component={Fasilitas}/>
           </Switch>
         </div>
         <Footer />
