@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.289fce5d.chunk.css",
+    "main.js": "/static/js/main.964dde67.chunk.js",
+    "main.js.map": "/static/js/main.964dde67.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.1c6855af.js",
+    "runtime-main.js.map": "/static/js/runtime-main.1c6855af.js.map",
+    "static/css/2.abd97b8c.chunk.css": "/static/css/2.abd97b8c.chunk.css",
+    "static/js/2.08665035.chunk.js": "/static/js/2.08665035.chunk.js",
+    "static/js/2.08665035.chunk.js.map": "/static/js/2.08665035.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.16930ffb609a894aeec7169fe5af3f28.js": "/precache-manifest.16930ffb609a894aeec7169fe5af3f28.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.abd97b8c.chunk.css.map": "/static/css/2.abd97b8c.chunk.css.map",
+    "static/css/main.289fce5d.chunk.css.map": "/static/css/main.289fce5d.chunk.css.map",
+    "static/js/2.08665035.chunk.js.LICENSE.txt": "/static/js/2.08665035.chunk.js.LICENSE.txt",
+    "static/media/bareng.jpeg": "/static/media/bareng.4dde6f19.jpeg",
+    "static/media/App.css": "/static/media/testimonials-bg.107d665e.jpg",
+    "static/media/diskusi1.jpeg": "/static/media/diskusi1.f96cd1a8.jpeg",
+    "static/media/prestasi.jpeg": "/static/media/prestasi.e9ec2208.jpeg",
+    "static/media/question.png": "/static/media/question.015700d4.png",
+    "static/media/teacher.png": "/static/media/teacher.a6a8aeb0.png",
+    "static/media/topiwisuda.png": "/static/media/topiwisuda.36794b86.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1c6855af.js",
+    "static/css/2.abd97b8c.chunk.css",
+    "static/js/2.08665035.chunk.js",
+    "static/css/main.289fce5d.chunk.css",
+    "static/js/main.964dde67.chunk.js"
+  ]
+}
