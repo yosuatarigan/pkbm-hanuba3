@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/pkbm-hanuba3/static/css/main.ed8029a6.chunk.css",
-    "main.js": "/pkbm-hanuba3/static/js/main.65fc17d6.chunk.js",
-    "main.js.map": "/pkbm-hanuba3/static/js/main.65fc17d6.chunk.js.map",
+    "main.css": "/pkbm-hanuba3/static/css/main.0c13e7e4.chunk.css",
+    "main.js": "/pkbm-hanuba3/static/js/main.13582da4.chunk.js",
+    "main.js.map": "/pkbm-hanuba3/static/js/main.13582da4.chunk.js.map",
     "runtime-main.js": "/pkbm-hanuba3/static/js/runtime-main.5a8ae3cc.js",
     "runtime-main.js.map": "/pkbm-hanuba3/static/js/runtime-main.5a8ae3cc.js.map",
     "static/css/2.d811125f.chunk.css": "/pkbm-hanuba3/static/css/2.d811125f.chunk.css",
-    "static/js/2.83fc09b6.chunk.js": "/pkbm-hanuba3/static/js/2.83fc09b6.chunk.js",
-    "static/js/2.83fc09b6.chunk.js.map": "/pkbm-hanuba3/static/js/2.83fc09b6.chunk.js.map",
+    "static/js/2.60f07989.chunk.js": "/pkbm-hanuba3/static/js/2.60f07989.chunk.js",
+    "static/js/2.60f07989.chunk.js.map": "/pkbm-hanuba3/static/js/2.60f07989.chunk.js.map",
     "index.html": "/pkbm-hanuba3/index.html",
-    "precache-manifest.54c7216dde040b86a7dc486131c2f5af.js": "/pkbm-hanuba3/precache-manifest.54c7216dde040b86a7dc486131c2f5af.js",
+    "precache-manifest.c265766eeb9934a5d0d7482e1acba902.js": "/pkbm-hanuba3/precache-manifest.c265766eeb9934a5d0d7482e1acba902.js",
     "service-worker.js": "/pkbm-hanuba3/service-worker.js",
     "static/css/2.d811125f.chunk.css.map": "/pkbm-hanuba3/static/css/2.d811125f.chunk.css.map",
-    "static/css/main.ed8029a6.chunk.css.map": "/pkbm-hanuba3/static/css/main.ed8029a6.chunk.css.map",
-    "static/js/2.83fc09b6.chunk.js.LICENSE.txt": "/pkbm-hanuba3/static/js/2.83fc09b6.chunk.js.LICENSE.txt",
+    "static/css/main.0c13e7e4.chunk.css.map": "/pkbm-hanuba3/static/css/main.0c13e7e4.chunk.css.map",
+    "static/js/2.60f07989.chunk.js.LICENSE.txt": "/pkbm-hanuba3/static/js/2.60f07989.chunk.js.LICENSE.txt",
     "static/media/App.css": "/pkbm-hanuba3/static/media/testimonials-bg.107d665e.jpg",
     "static/media/Alumni.css": "/pkbm-hanuba3/static/media/bg-alumni.b337f2e9.jpg",
     "static/media/pendaftaran.css": "/pkbm-hanuba3/static/media/bg-pendaftar.526a333a.jpg",
+    "static/media/fasilitas.png": "/pkbm-hanuba3/static/media/fasilitas.81c51b3d.png",
     "static/media/question.png": "/pkbm-hanuba3/static/media/question.015700d4.png",
     "static/media/teacher.png": "/pkbm-hanuba3/static/media/teacher.a6a8aeb0.png",
     "static/media/topiwisuda.png": "/pkbm-hanuba3/static/media/topiwisuda.36794b86.png"
@@ -24,8 +25,8 @@
   "entrypoints": [
     "static/js/runtime-main.5a8ae3cc.js",
     "static/css/2.d811125f.chunk.css",
-    "static/js/2.83fc09b6.chunk.js",
-    "static/css/main.ed8029a6.chunk.css",
-    "static/js/main.65fc17d6.chunk.js"
+    "static/js/2.60f07989.chunk.js",
+    "static/css/main.0c13e7e4.chunk.css",
+    "static/js/main.13582da4.chunk.js"
   ]
 }
