@@ -1,23 +1,24 @@
 {
   "files": {
     "main.css": "/pkbm-hanuba3/static/css/main.62defcff.chunk.css",
-    "main.js": "/pkbm-hanuba3/static/js/main.90329297.chunk.js",
-    "main.js.map": "/pkbm-hanuba3/static/js/main.90329297.chunk.js.map",
+    "main.js": "/pkbm-hanuba3/static/js/main.c1bc84c8.chunk.js",
+    "main.js.map": "/pkbm-hanuba3/static/js/main.c1bc84c8.chunk.js.map",
     "runtime-main.js": "/pkbm-hanuba3/static/js/runtime-main.5a8ae3cc.js",
     "runtime-main.js.map": "/pkbm-hanuba3/static/js/runtime-main.5a8ae3cc.js.map",
     "static/css/2.d811125f.chunk.css": "/pkbm-hanuba3/static/css/2.d811125f.chunk.css",
-    "static/js/2.fcd2a444.chunk.js": "/pkbm-hanuba3/static/js/2.fcd2a444.chunk.js",
-    "static/js/2.fcd2a444.chunk.js.map": "/pkbm-hanuba3/static/js/2.fcd2a444.chunk.js.map",
+    "static/js/2.4b2f1bb5.chunk.js": "/pkbm-hanuba3/static/js/2.4b2f1bb5.chunk.js",
+    "static/js/2.4b2f1bb5.chunk.js.map": "/pkbm-hanuba3/static/js/2.4b2f1bb5.chunk.js.map",
     "index.html": "/pkbm-hanuba3/index.html",
-    "precache-manifest.0f1a9414cba3cc337a36c1b3ba43b3c0.js": "/pkbm-hanuba3/precache-manifest.0f1a9414cba3cc337a36c1b3ba43b3c0.js",
+    "precache-manifest.f2e2d9ea9ed86805e10f1d1d2322cf52.js": "/pkbm-hanuba3/precache-manifest.f2e2d9ea9ed86805e10f1d1d2322cf52.js",
     "service-worker.js": "/pkbm-hanuba3/service-worker.js",
     "static/css/2.d811125f.chunk.css.map": "/pkbm-hanuba3/static/css/2.d811125f.chunk.css.map",
     "static/css/main.62defcff.chunk.css.map": "/pkbm-hanuba3/static/css/main.62defcff.chunk.css.map",
-    "static/js/2.fcd2a444.chunk.js.LICENSE.txt": "/pkbm-hanuba3/static/js/2.fcd2a444.chunk.js.LICENSE.txt",
+    "static/js/2.4b2f1bb5.chunk.js.LICENSE.txt": "/pkbm-hanuba3/static/js/2.4b2f1bb5.chunk.js.LICENSE.txt",
     "static/media/App.css": "/pkbm-hanuba3/static/media/testimonials-bg.107d665e.jpg",
     "static/media/Alumni.css": "/pkbm-hanuba3/static/media/bg-alumni.b337f2e9.jpg",
     "static/media/pendaftaran.css": "/pkbm-hanuba3/static/media/bg-pendaftar.526a333a.jpg",
     "static/media/fasilitas.png": "/pkbm-hanuba3/static/media/fasilitas.81c51b3d.png",
+    "static/media/logosekolah.png": "/pkbm-hanuba3/static/media/logosekolah.3d1c4405.png",
     "static/media/question.png": "/pkbm-hanuba3/static/media/question.015700d4.png",
     "static/media/teacher.png": "/pkbm-hanuba3/static/media/teacher.a6a8aeb0.png",
     "static/media/topiwisuda.png": "/pkbm-hanuba3/static/media/topiwisuda.36794b86.png"
@@ -25,8 +26,8 @@
   "entrypoints": [
     "static/js/runtime-main.5a8ae3cc.js",
     "static/css/2.d811125f.chunk.css",
-    "static/js/2.fcd2a444.chunk.js",
+    "static/js/2.4b2f1bb5.chunk.js",
     "static/css/main.62defcff.chunk.css",
-    "static/js/main.90329297.chunk.js"
+    "static/js/main.c1bc84c8.chunk.js"
   ]
 }
