@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/pkbm-hanuba3/static/css/main.62defcff.chunk.css",
-    "main.js": "/pkbm-hanuba3/static/js/main.0b5d61ee.chunk.js",
-    "main.js.map": "/pkbm-hanuba3/static/js/main.0b5d61ee.chunk.js.map",
+    "main.js": "/pkbm-hanuba3/static/js/main.5340ee31.chunk.js",
+    "main.js.map": "/pkbm-hanuba3/static/js/main.5340ee31.chunk.js.map",
     "runtime-main.js": "/pkbm-hanuba3/static/js/runtime-main.5a8ae3cc.js",
     "runtime-main.js.map": "/pkbm-hanuba3/static/js/runtime-main.5a8ae3cc.js.map",
     "static/css/2.d811125f.chunk.css": "/pkbm-hanuba3/static/css/2.d811125f.chunk.css",
-    "static/js/2.4b2f1bb5.chunk.js": "/pkbm-hanuba3/static/js/2.4b2f1bb5.chunk.js",
-    "static/js/2.4b2f1bb5.chunk.js.map": "/pkbm-hanuba3/static/js/2.4b2f1bb5.chunk.js.map",
+    "static/js/2.f7b928e3.chunk.js": "/pkbm-hanuba3/static/js/2.f7b928e3.chunk.js",
+    "static/js/2.f7b928e3.chunk.js.map": "/pkbm-hanuba3/static/js/2.f7b928e3.chunk.js.map",
     "index.html": "/pkbm-hanuba3/index.html",
-    "precache-manifest.298c281b133b1bcf4adf5cebfa807122.js": "/pkbm-hanuba3/precache-manifest.298c281b133b1bcf4adf5cebfa807122.js",
+    "precache-manifest.89433e9ec3145eb600060adcceb2908c.js": "/pkbm-hanuba3/precache-manifest.89433e9ec3145eb600060adcceb2908c.js",
     "service-worker.js": "/pkbm-hanuba3/service-worker.js",
     "static/css/2.d811125f.chunk.css.map": "/pkbm-hanuba3/static/css/2.d811125f.chunk.css.map",
     "static/css/main.62defcff.chunk.css.map": "/pkbm-hanuba3/static/css/main.62defcff.chunk.css.map",
-    "static/js/2.4b2f1bb5.chunk.js.LICENSE.txt": "/pkbm-hanuba3/static/js/2.4b2f1bb5.chunk.js.LICENSE.txt",
+    "static/js/2.f7b928e3.chunk.js.LICENSE.txt": "/pkbm-hanuba3/static/js/2.f7b928e3.chunk.js.LICENSE.txt",
     "static/media/App.css": "/pkbm-hanuba3/static/media/testimonials-bg.107d665e.jpg",
     "static/media/Alumni.css": "/pkbm-hanuba3/static/media/bg-alumni.b337f2e9.jpg",
     "static/media/pendaftaran.css": "/pkbm-hanuba3/static/media/bg-pendaftar.526a333a.jpg",
@@ -26,8 +26,8 @@
   "entrypoints": [
     "static/js/runtime-main.5a8ae3cc.js",
     "static/css/2.d811125f.chunk.css",
-    "static/js/2.4b2f1bb5.chunk.js",
+    "static/js/2.f7b928e3.chunk.js",
     "static/css/main.62defcff.chunk.css",
-    "static/js/main.0b5d61ee.chunk.js"
+    "static/js/main.5340ee31.chunk.js"
   ]
 }
